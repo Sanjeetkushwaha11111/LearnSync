@@ -1,0 +1,37 @@
+{
+  "questions": [
+    {
+      "timeInSeconds": 10,
+      "question": "What is the main character in Big Buck Bunny?",
+      "options": [
+        "A rabbit",
+        "A bunny",
+        "A hare",
+        "A squirrel"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "timeInSeconds": 20,
+      "question": "What color is Big Buck Bunny?",
+      "options": [
+        "Brown",
+        "Grey",
+        "White",
+        "Black"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "timeInSeconds": 30,
+      "question": "What type of animation is Big Buck Bunny?",
+      "options": [
+        "Hand-drawn",
+        "Stop motion",
+        "3D computer",
+        "2D digital"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}
