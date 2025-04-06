@@ -4,17 +4,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/playerView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/videoContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:use_controller="true"
-        app:resize_mode="fit"
-        app:show_timeout="5000" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/aspectRatioGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5625" /> <!-- 9/16 = 0.5625 -->
+
+        <FrameLayout
+            android:id="@+id/playerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:use_controller="true"
+                app:resize_mode="fit"
+                app:show_timeout="5000" />
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtubePlayerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Big Buck Bunny"
+            app:layout_constraintTop_toBottomOf="@id/playerContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvStartChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Start a conversation about this video"
+        android:textSize="16sp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/videoContainer" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvComments"
@@ -22,8 +76,9 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/commentLayout"
-        app:layout_constraintTop_toBottomOf="@id/playerView" />
+        app:layout_constraintTop_toBottomOf="@id/videoContainer" />
 
     <LinearLayout
         android:id="@+id/commentLayout"
@@ -31,6 +86,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <EditText
@@ -40,8 +97,7 @@
             android:layout_weight="1"
             android:hint="Add a comment..."
             android:inputType="text"
-            android:padding="12dp"
-            android:background="@android:drawable/editbox_background" />
+            android:background="@drawable/edit_text_background" />
 
         <Button
             android:id="@+id/btnSend"

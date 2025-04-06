@@ -1,4 +1,4 @@
-package com.example.reminder
+package com.example.learnsync
 
 data class Comment(
     val text: String,

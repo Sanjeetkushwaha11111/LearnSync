@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "reminder"
+rootProject.name = "learnsync"
 include(":app")

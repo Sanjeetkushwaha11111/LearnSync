@@ -1,4 +1,4 @@
-package com.example.reminder
+package com.example.learnsync
 
 import android.content.Context
 import com.google.gson.Gson

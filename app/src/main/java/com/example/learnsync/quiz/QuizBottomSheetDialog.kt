@@ -1,4 +1,4 @@
-package com.example.reminder.quiz
+package com.example.learnsync.quiz
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
-import com.example.reminder.R
+import com.example.learnsync.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class QuizBottomSheetDialog : BottomSheetDialogFragment() {

@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "What is the SI unit of electric charge?",
+      "options": [
+        "Volt",
+        "Ampere",
+        "Coulomb",
+        "Ohm"
+      ],
+      "correctAnswer": 2,
+      "timeInSeconds": 10
+    },
+    {
+      "question": "What is Coulomb's law about?",
+      "options": [
+        "Electric current flow",
+        "Force between electric charges",
+        "Magnetic fields",
+        "Electric resistance"
+      ],
+      "correctAnswer": 1,
+      "timeInSeconds": 20
+    },
+    {
+      "question": "What happens when like charges are brought near each other?",
+      "options": [
+        "They attract",
+        "They repel",
+        "Nothing happens",
+        "They neutralize"
+      ],
+      "correctAnswer": 1,
+      "timeInSeconds": 30
+    },
+    {
+      "question": "What is an electric field?",
+      "options": [
+        "A region of moving charges",
+        "A region where electric force is experienced",
+        "A region of neutral charges",
+        "A region of magnetic force"
+      ],
+      "correctAnswer": 1,
+      "timeInSeconds": 40
+    },
+    {
+      "question": "What is the direction of electric field lines?",
+      "options": [
+        "From negative to positive charge",
+        "From positive to negative charge",
+        "Perpendicular to charges",
+        "Random direction"
+      ],
+      "correctAnswer": 1,
+      "timeInSeconds": 50
+    }
+  ]
+}

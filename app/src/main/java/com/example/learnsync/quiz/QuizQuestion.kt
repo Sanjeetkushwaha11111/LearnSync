@@ -1,4 +1,4 @@
-package com.example.reminder.quiz
+package com.example.learnsync.quiz
 
 data class QuizQuestion(
     val timeInSeconds: Int,
